@@ -1,0 +1,20 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <h1>Reviews</h1>
+  </div>
+  <div class="container-fluid justify-content-end">
+    <a class="navbar-brand" ><%= link_to "Create a review", new_restaurant_review_path(@restaurant) %></a>
+  </div>
+</nav>
+
+
+<div class="container-md text-center">
+  <ul class="list-unstyled list-group">
+    <% @reviews.each do |review| %>
+        <a class="list-group-item list-group-item-action">
+          <h3> <strong> <%= review.rating %> </strong> </h3>
+          <h4> <%= review.content %> </h4>
+        </a>
+    <% end %>
+  </ul>
+</div>

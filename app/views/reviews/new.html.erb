@@ -1,0 +1,12 @@
+<h1>New review</h1>
+<%= form_with model: @reviews do |f| %>
+  <div class="mb-3">
+    <%= f.label :content %>
+    <%= f.text_field :content %>
+  </div>
+  <div class="mb-3">
+    <%= f.label :rating %>
+    <%= f.number_field :rating %>
+  </div>
+    <%= f.submit %>
+<% end %>
